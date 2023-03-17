@@ -1,0 +1,16 @@
+Fri 17 Mar 2023 06:41:11 PM UTC: 
+ exercises.c | 27 +++++++++++++++++++++++----
+ 1 file changed, 23 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:59:4: error: ‘p’ is a pointer; did you mean to use ‘->’?
+   59 |   p.edad = edad;
+      |    ^
+      |    ->
+exercises.c: In function ‘crearVector’:
+exercises.c:81:4: error: ‘v’ is a pointer; did you mean to use ‘->’?
+   81 |   v.capacidad = n;
+      |    ^
+      |    ->
+Compilation failed
+706471e

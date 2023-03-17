@@ -13,7 +13,10 @@ Programe la función void swap(int *a, int *b), la cual
 intercambia los valores de las variables apuntadas por a y b.
 */
 void swap(int *a, int *b) {
-
+   int temp;
+   temp = *a;
+   *a = *b;
+   *b = temp;
 }
 
 /*
@@ -23,7 +26,13 @@ la cual encuentra el máximo y el mínimo valor del arreglo a y los
 almacena en las variables apuntadas por max y min.
 */
 void arrayMaxMin(int *a, int n, int *max, int *min) {
-    
+    *min = a[0];
+    *max = a[0];
+    for (int i=0 ; i < n ; i++)
+    {
+      if (a[i]>*max) *max = a[i];
+      if (a[i]<*min) *min = a[i];
+    }
 }
 
 
@@ -44,7 +53,10 @@ typedef struct {
 Persona* crearPersona(char nombre[], char rut[], int edad) {
    Persona * p = (Persona *) malloc(sizeof(Persona));
    //asignar valores de entrada a los campos de p
-
+  if (p== NULL) return NULL;
+  strcpy (p->nombre , nombre);
+  strcpy (p->rut , rut);
+  p.edad = edad;
 
    return p;
 }
@@ -63,7 +75,14 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-   return NULL;
+  Vector * v = (Vector *) malloc(sizeof(Vector));
+  if (v == NULL) return NULL;
+
+  v.capacidad = n;
+
+  v->datos = (int *) calloc (n,sizeof(int));
+  if(v->datos == NULL) return NULL;
+   return v;
 }
 
 /*
