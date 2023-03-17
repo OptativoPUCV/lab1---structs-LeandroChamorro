@@ -56,7 +56,7 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
   if (p== NULL) return NULL;
   strcpy (p->nombre , nombre);
   strcpy (p->rut , rut);
-  p.edad = edad;
+  p->edad = edad;
 
    return p;
 }
@@ -78,7 +78,7 @@ Vector * crearVector(int n) {
   Vector * v = (Vector *) malloc(sizeof(Vector));
   if (v == NULL) return NULL;
 
-  v.capacidad = n;
+  v->capacidad = n;
 
   v->datos = (int *) calloc (n,sizeof(int));
   if(v->datos == NULL) return NULL;
