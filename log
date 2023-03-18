@@ -38,3 +38,26 @@ Sat 18 Mar 2023 03:46:06 PM UTC:
  tests:  7|1
 total_score: 60/70
 8d4ecd6
+Sat 18 Mar 2023 03:55:40 PM UTC: 
+ exercises.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaV2’:
+exercises.c:127:3: error: ‘a’ undeclared (first use in this function)
+  127 |   a = crearVector(2);
+      |   ^
+exercises.c:127:3: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:128:3: error: ‘b’ undeclared (first use in this function)
+  128 |   b = crearVector(2);
+      |   ^
+exercises.c:135:15: error: passing argument 3 of ‘sumaV’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  135 |   sumaV(&a,&b,&c);
+      |               ^~
+      |               |
+      |               Vector **
+exercises.c:111:45: note: expected ‘Vector *’ but argument is of type ‘Vector **’
+  111 | void sumaV(Vector * a, Vector * b, Vector * c) {
+      |                                    ~~~~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+a85598a
