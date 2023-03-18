@@ -74,3 +74,59 @@ exercises.c:128:14: error: invalid initializer
       |              ^~~~~~~~~~~
 Compilation failed
 955b61a
+Sat 18 Mar 2023 03:56:48 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaV2’:
+exercises.c:130:16: error: passing argument 1 of ‘asignarValor’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  130 |   asignarValor(& a, 0, a1);
+      |                ^~~
+      |                |
+      |                Vector **
+exercises.c:93:28: note: expected ‘Vector *’ but argument is of type ‘Vector **’
+   93 | void asignarValor(Vector * v, int i, int valor) {
+      |                   ~~~~~~~~~^
+exercises.c:131:16: error: passing argument 1 of ‘asignarValor’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  131 |   asignarValor(& a, 1, a2);
+      |                ^~~
+      |                |
+      |                Vector **
+exercises.c:93:28: note: expected ‘Vector *’ but argument is of type ‘Vector **’
+   93 | void asignarValor(Vector * v, int i, int valor) {
+      |                   ~~~~~~~~~^
+exercises.c:132:16: error: passing argument 1 of ‘asignarValor’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  132 |   asignarValor(& b, 0, b1);
+      |                ^~~
+      |                |
+      |                Vector **
+exercises.c:93:28: note: expected ‘Vector *’ but argument is of type ‘Vector **’
+   93 | void asignarValor(Vector * v, int i, int valor) {
+      |                   ~~~~~~~~~^
+exercises.c:133:16: error: passing argument 1 of ‘asignarValor’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  133 |   asignarValor(& b, 1, b2);
+      |                ^~~
+      |                |
+      |                Vector **
+exercises.c:93:28: note: expected ‘Vector *’ but argument is of type ‘Vector **’
+   93 | void asignarValor(Vector * v, int i, int valor) {
+      |                   ~~~~~~~~~^
+exercises.c:135:9: error: passing argument 1 of ‘sumaV’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  135 |   sumaV(&a,&b,c);
+      |         ^~
+      |         |
+      |         Vector **
+exercises.c:111:21: note: expected ‘Vector *’ but argument is of type ‘Vector **’
+  111 | void sumaV(Vector * a, Vector * b, Vector * c) {
+      |            ~~~~~~~~~^
+exercises.c:135:12: error: passing argument 2 of ‘sumaV’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  135 |   sumaV(&a,&b,c);
+      |            ^~
+      |            |
+      |            Vector **
+exercises.c:111:33: note: expected ‘Vector *’ but argument is of type ‘Vector **’
+  111 | void sumaV(Vector * a, Vector * b, Vector * c) {
+      |                        ~~~~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+0eea2aa
