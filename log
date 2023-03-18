@@ -61,3 +61,16 @@ exercises.c:111:45: note: expected ‘Vector *’ but argument is of type ‘Vec
 cc1: all warnings being treated as errors
 Compilation failed
 a85598a
+Sat 18 Mar 2023 03:56:23 PM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaV2’:
+exercises.c:127:14: error: invalid initializer
+  127 |   Vector a = crearVector(2);
+      |              ^~~~~~~~~~~
+exercises.c:128:14: error: invalid initializer
+  128 |   Vector b = crearVector(2);
+      |              ^~~~~~~~~~~
+Compilation failed
+955b61a
